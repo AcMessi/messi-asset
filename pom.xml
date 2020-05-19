@@ -17,6 +17,10 @@
 
     <modules>
         <module>solution-mq</module>
+        <module>solution-eureka-server</module>
+        <module>solution-eureka-client</module>
+        <module>solution-eureka-hystrix-feign-client</module>
+        <module>solution-eureka-zuul</module>
     </modules>
 
     <properties>
@@ -70,18 +74,8 @@
             <artifactId>commons-lang</artifactId>
             <version>2.6</version>
         </dependency>
-        <dependency>
-            <groupId>org.dom4j</groupId>
-            <artifactId>dom4j</artifactId>
-            <version>2.1.1</version>
-        </dependency>
-        <dependency>
-            <groupId>com.thoughtworks.xstream</groupId>
-            <artifactId>xstream</artifactId>
-            <version>1.4.9</version>
-        </dependency>
 
-        <!-- http tools -->
+        <!-- http tools : Feign-->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-openfeign</artifactId>

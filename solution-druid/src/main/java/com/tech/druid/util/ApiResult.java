@@ -1,4 +1,4 @@
-package com.tech.quartz.util;
+package com.tech.druid.util;
 
 import javax.servlet.annotation.WebFilter;
 import java.util.HashMap;
@@ -14,7 +14,7 @@ import java.util.Map;
 @WebFilter
 public class ApiResult extends HashMap<String, Object> {
 
-    private static final long serialVersionUID = 317304202555379381L;
+    private static final long serialVersionUID = 5772761622327519887L;
 
     public static ApiResult failure(String message) {
         ApiResult result = new ApiResult();

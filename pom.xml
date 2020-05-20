@@ -23,6 +23,7 @@
         <module>solution-eureka-zuul</module>
         <module>solution-redis</module>
         <module>solution-quartz</module>
+        <module>solution-druid</module>
     </modules>
 
     <properties>

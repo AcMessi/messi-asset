@@ -17,7 +17,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class UserController {
 
     @GetMapping(value = "/getId")
-    public Integer getUserId(@RequestParam("id") Integer id){
+    public Integer getUserId(@RequestParam("id") Integer id) {
         return 12345;
     }
 }

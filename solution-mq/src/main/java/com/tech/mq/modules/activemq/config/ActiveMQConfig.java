@@ -25,5 +25,5 @@ public class ActiveMQConfig {
     public Topic topic() {
         return new ActiveMQTopic("springboot.topic");
     }
-    
+
 }

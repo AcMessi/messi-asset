@@ -11,7 +11,7 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 @EnableFeignClients
 @EnableTransactionManagement
 @MapperScan("com.tech.asset")
-@ComponentScan({"com.tech.mq.modules.swagger","com.tech.mq.modules.activemq"})
+@ComponentScan({"com.tech.mq.modules.swagger", "com.tech.mq.modules.activemq"})
 public class SolutionMqApplication {
 
     public static void main(String[] args) {

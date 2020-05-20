@@ -3,7 +3,6 @@ package com.tech.hystrix.service;
 import com.tech.hystrix.service.impl.UserFeginFailBackImpl;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 /**

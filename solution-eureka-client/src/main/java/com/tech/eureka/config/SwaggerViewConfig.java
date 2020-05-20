@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 public class SwaggerViewConfig {
 
     @GetMapping("/")
-    public String forwardSwagger(){
+    public String forwardSwagger() {
         return "redirect:/swagger-ui.html";
     }
 }

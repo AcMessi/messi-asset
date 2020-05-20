@@ -21,6 +21,7 @@
         <module>solution-eureka-client</module>
         <module>solution-eureka-hystrix-feign-client</module>
         <module>solution-eureka-zuul</module>
+        <module>solution-redis</module>
     </modules>
 
     <properties>
@@ -52,13 +53,6 @@
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
             <scope>runtime</scope>
-        </dependency>
-
-        <!-- mybatis -->
-        <dependency>
-            <groupId>org.mybatis.spring.boot</groupId>
-            <artifactId>mybatis-spring-boot-starter</artifactId>
-            <version>2.1.2</version>
         </dependency>
 
         <!-- pagination -->

@@ -34,6 +34,7 @@ public class TestController {
 
     @GetMapping("/getDataSource")
     public ApiResult selectByPrimaryKey() {
+        log.info("数据源：" + dataSource.getClass());
         Connection connection = null;
         try {
             connection = dataSource.getConnection();

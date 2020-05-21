@@ -1,0 +1,20 @@
+server:
+  port: 8116
+management:
+  #  security:
+  #    enabled: false     #SpringBoot 1.5.X 以上默认开通了安全认证，如果不关闭会要求权限
+  endpoint:
+    shutdown:
+      enabled: false
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
+spring:
+  devtools:
+    add-properties: false
+
+data: #当无法读取配置中心的配置时，使用此配置，以免项目无法启动
+  test1: NaN  # 使用此配置，以免项目无法启动
+  test2: NaN # 使用此配置，以免项目无法启动

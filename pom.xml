@@ -24,6 +24,8 @@
         <module>solution-redis</module>
         <module>solution-quartz</module>
         <module>solution-druid</module>
+        <module>solution-springcloud-config-server</module>
+        <module>solution-springcloud-config-client</module>
     </modules>
 
     <properties>

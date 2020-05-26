@@ -26,6 +26,7 @@
         <module>solution-druid</module>
         <module>solution-springcloud-config-server</module>
         <module>solution-springcloud-config-client</module>
+        <module>solution-redisson</module>
     </modules>
 
     <properties>

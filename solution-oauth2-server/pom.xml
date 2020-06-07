@@ -7,14 +7,15 @@
         <artifactId>messi-asset</artifactId>
         <version>0.0.1-SNAPSHOT</version>
     </parent>
-    <groupId>com.tech</groupId>
-    <artifactId>solution-redis</artifactId>
+    <groupId>com.tech.oauth2</groupId>
+    <artifactId>solution-oauth2-server</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>solution-redis</name>
-    <description>Solution project for Spring Boot</description>
+    <name>solution-oauth2-server</name>
+    <description>Demo project for Spring Boot</description>
 
     <properties>
         <java.version>1.8</java.version>
+        <spring-cloud.version>Hoxton.SR5</spring-cloud.version>
     </properties>
 
     <dependencies>
@@ -25,7 +26,19 @@
             <version>${solution-base.version}</version>
         </dependency>
 
-        <!--springboot中的redis依赖-->
+        <!-- Spring Security, OAuth2, JWT -->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-oauth2</artifactId>
+        </dependency>
+
+        <!-- eureka client-->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+        </dependency>
+
+        <!-- redis-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-data-redis</artifactId>
@@ -37,19 +50,30 @@
             <artifactId>mybatis-spring-boot-starter</artifactId>
         </dependency>
 
-        <!-- jdbc -->
+        <!--druid连接池-->
         <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-jdbc</artifactId>
+            <groupId>com.alibaba</groupId>
+            <artifactId>druid-spring-boot-starter</artifactId>
         </dependency>
 
         <!-- mysql -->
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
-            <scope>runtime</scope>
         </dependency>
     </dependencies>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-dependencies</artifactId>
+                <version>${spring-cloud.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
 
     <build>
         <plugins>

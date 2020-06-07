@@ -18,6 +18,11 @@
     </properties>
 
     <dependencies>
+        <dependency>
+            <groupId>com.tech.base</groupId>
+            <artifactId>solution-base</artifactId>
+            <version>${solution-base.version}</version>
+        </dependency>
         <!--springboot中的redis依赖-->
         <dependency>
             <groupId>org.springframework.boot</groupId>

@@ -18,6 +18,13 @@
     </properties>
 
     <dependencies>
+        <!-- base jar-->
+        <dependency>
+            <groupId>com.tech.base</groupId>
+            <artifactId>solution-base</artifactId>
+            <version>${solution-base.version}</version>
+        </dependency>
+
         <!-- quartz -->
         <dependency>
             <groupId>org.quartz-scheduler</groupId>
@@ -34,7 +41,6 @@
         <dependency>
             <groupId>com.mchange</groupId>
             <artifactId>c3p0</artifactId>
-            <version>0.9.5.2</version>
         </dependency>
     </dependencies>
 

@@ -1,17 +1,15 @@
-package com.tech.zuul;
+package com.tech.oauth2.server;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
-import org.springframework.cloud.netflix.zuul.EnableZuulProxy;
 
 @SpringBootApplication
 @EnableDiscoveryClient
-@EnableZuulProxy
-public class SolutionEurekaZuulApplication {
+public class SolutionOauth2ServerApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(SolutionEurekaZuulApplication.class, args);
+        SpringApplication.run(SolutionOauth2ServerApplication.class, args);
     }
 
 }

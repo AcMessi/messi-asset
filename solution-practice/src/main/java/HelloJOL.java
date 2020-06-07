@@ -10,5 +10,10 @@ public class HelloJOL {
     public static void main(String[] args) {
         Object obj = new Object();
         System.out.println(ClassLayout.parseInstance(obj).toPrintable());
+
+        synchronized (obj) {
+            // 证明markword里记录了锁信息
+            System.out.println(ClassLayout.parseInstance(obj).toPrintable());
+        }
     }
 }

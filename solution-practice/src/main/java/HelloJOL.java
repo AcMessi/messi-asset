@@ -7,7 +7,10 @@ import org.openjdk.jol.info.ClassLayout;
  */
 public class HelloJOL {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
+        //偏向锁有4s的延迟
+        //Thread.sleep(5000);
+
         Object obj = new Object();
         System.out.println(ClassLayout.parseInstance(obj).toPrintable());
 

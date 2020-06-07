@@ -28,6 +28,7 @@
         <module>solution-springcloud-config-client</module>
         <module>solution-redisson</module>
         <module>solution-base</module>
+        <module>solution-practice</module>
     </modules>
 
     <properties>

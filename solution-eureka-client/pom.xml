@@ -7,7 +7,7 @@
         <artifactId>messi-asset</artifactId>
         <version>0.0.1-SNAPSHOT</version>
     </parent>
-    <groupId>com.tech</groupId>
+    <groupId>com.tech.eureka</groupId>
     <artifactId>solution-eureka-client</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>solution-eureka-client</name>
@@ -19,6 +19,13 @@
     </properties>
 
     <dependencies>
+        <!-- base jar-->
+        <dependency>
+            <groupId>com.tech.base</groupId>
+            <artifactId>solution-base</artifactId>
+            <version>${solution-base.version}</version>
+        </dependency>
+
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
@@ -35,11 +42,6 @@
 
     <dependencyManagement>
         <dependencies>
-            <dependency>
-                <groupId>com.tech.base</groupId>
-                <artifactId>solution-base</artifactId>
-                <version>${solution-base.version}</version>
-            </dependency>
             <dependency>
                 <groupId>org.springframework.cloud</groupId>
                 <artifactId>spring-cloud-dependencies</artifactId>

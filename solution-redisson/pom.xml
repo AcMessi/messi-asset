@@ -23,6 +23,13 @@
             <artifactId>solution-base</artifactId>
             <version>${solution-base.version}</version>
         </dependency>
+
+        <!-- web -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+
         <!--springboot中的redis依赖-->
         <dependency>
             <groupId>org.springframework.boot</groupId>

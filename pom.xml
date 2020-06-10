@@ -40,7 +40,7 @@
         <springfox-swagger-ui.version>2.7.0</springfox-swagger-ui.version>
         <kaptcha.version>2.3.2</kaptcha.version>
         <druid-spring-boot-starter.version>1.1.22</druid-spring-boot-starter.version>
-        <fastjson.version>1.2.8</fastjson.version>
+        <fastjson.version>1.2.25.sec10</fastjson.version>
         <commons-collections.version>3.2.2</commons-collections.version>
         <commons-io.version>2.6</commons-io.version>
         <!-- 定义版本号, 子模块直接引用-->

@@ -6,6 +6,7 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.oauth2.config.annotation.configurers.ClientDetailsServiceConfigurer;
 import org.springframework.security.oauth2.config.annotation.web.configuration.AuthorizationServerConfigurerAdapter;
 import org.springframework.security.oauth2.config.annotation.web.configuration.EnableAuthorizationServer;
+import org.springframework.security.oauth2.config.annotation.web.configurers.AuthorizationServerSecurityConfigurer;
 
 /**
  * @Description: 认证服务器配置类
@@ -33,6 +34,7 @@ public class AuthorizationServerConfig extends AuthorizationServerConfigurerAdap
         clients.inMemory()
                 .withClient("test") // 客户端id
                 .secret(passwordEncoder.encode("test123")) // 加密，客户端密码
+                .resourceIds("test_server")
                 .authorizedGrantTypes("authorization_code", "password", "implicit", "client_credentials", "refresh_token")
                 .scopes("all") // 授权范围标识，哪部分资源可访问（all只是标识，不是说所有资源）
                 .autoApprove(false) // false 跳到一个授权页面手动点击授权，true不需要手动点授权，直接响应一个授权码
@@ -41,7 +43,21 @@ public class AuthorizationServerConfig extends AuthorizationServerConfigurerAdap
                 .refreshTokenValiditySeconds(60 * 60 * 24 * 60); // 刷新令牌有效时长,默认是30天
 //        http://localhost:8201/oauth/authorize?client_id=test&response_type=code
 //        http:localhost:8201/oauth/token
-//        Authorization: Basic client_id/client_secret
+//        Authorization: Basic base64(clientId:clientSecret)
 //        code = KfeCcT & grant_type = authorization_code
+    }
+
+    /**
+     * 令牌端点的安全配置
+     *
+     * @param security
+     * @throws Exception
+     */
+    @Override
+    public void configure(AuthorizationServerSecurityConfigurer security) throws Exception {
+        // 认证后可访问 /oauth/token_key , 默认拒绝访问
+        security.tokenKeyAccess("permitAll()");
+        // 认证后可访问 /oauth/check_token , 默认拒绝访问
+        security.checkTokenAccess("isAuthenticated()");
     }
 }

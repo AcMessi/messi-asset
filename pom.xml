@@ -29,6 +29,8 @@
         <module>solution-redisson</module>
         <module>solution-base</module>
         <module>solution-practice</module>
+        <module>solution-oauth2-server</module>
+        <module>solution-oauth2-client</module>
     </modules>
 
     <properties>

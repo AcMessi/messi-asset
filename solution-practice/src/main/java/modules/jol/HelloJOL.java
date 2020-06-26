@@ -1,3 +1,5 @@
+package modules.jol;
+
 import org.openjdk.jol.info.ClassLayout;
 
 /**

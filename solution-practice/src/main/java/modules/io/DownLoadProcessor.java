@@ -16,7 +16,7 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
 /**
- * @Description: dowanload big file using multiple threads
+ * @Description: multi-thread downloading big file
  * @Author: messi.chaoqun.wang
  * @Date: 2020/7/3
  */

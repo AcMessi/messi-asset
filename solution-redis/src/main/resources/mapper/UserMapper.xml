@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.tech.dao.UserMapper">
-    <resultMap id="BaseResultMap" type="com.tech.model.User">
+<mapper namespace="com.tech.redis.dao.UserMapper">
+    <resultMap id="BaseResultMap" type="com.tech.redis.model.User">
         <id column="user_id" jdbcType="BIGINT" property="userId"/>
         <result column="user_name" jdbcType="VARCHAR" property="userName"/>
         <result column="user_status" jdbcType="VARCHAR" property="userStatus"/>
@@ -28,7 +28,7 @@
     delete from user
     where user_id = #{userId,jdbcType=BIGINT}
   </delete>
-    <insert id="insert" parameterType="com.tech.model.User">
+    <insert id="insert" parameterType="com.tech.redis.model.User">
     insert into user (user_id, user_name, user_status, 
       create_time, update_time, lock_time, 
       delete_time, create_user, update_user, 
@@ -38,7 +38,7 @@
       #{deleteTime,jdbcType=TIMESTAMP}, #{createUser,jdbcType=VARCHAR}, #{updateUser,jdbcType=VARCHAR}, 
       #{lockUser,jdbcType=VARCHAR}, #{deleteUser,jdbcType=VARCHAR})
   </insert>
-    <insert id="insertSelective" parameterType="com.tech.model.User">
+    <insert id="insertSelective" parameterType="com.tech.redis.model.User">
         insert into user
         <trim prefix="(" suffix=")" suffixOverrides=",">
             <if test="userId != null">
@@ -111,7 +111,7 @@
             </if>
         </trim>
     </insert>
-    <update id="updateByPrimaryKeySelective" parameterType="com.tech.model.User">
+    <update id="updateByPrimaryKeySelective" parameterType="com.tech.redis.model.User">
         update user
         <set>
             <if test="userName != null">
@@ -147,7 +147,7 @@
         </set>
         where user_id = #{userId,jdbcType=BIGINT}
     </update>
-    <update id="updateByPrimaryKey" parameterType="com.tech.model.User">
+    <update id="updateByPrimaryKey" parameterType="com.tech.redis.model.User">
     update user
     set user_name = #{userName,jdbcType=VARCHAR},
       user_status = #{userStatus,jdbcType=VARCHAR},

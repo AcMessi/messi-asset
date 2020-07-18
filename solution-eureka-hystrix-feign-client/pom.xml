@@ -26,6 +26,12 @@
             <version>${solution-base.version}</version>
         </dependency>
 
+        <!-- web -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+
         <!-- http tools : Feign-->
         <dependency>
             <groupId>org.springframework.cloud</groupId>

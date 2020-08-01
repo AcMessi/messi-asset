@@ -1,6 +1,7 @@
 package modules.object;
 
 import lombok.Data;
+import lombok.extern.slf4j.Slf4j;
 
 /**
  * @Description:
@@ -8,6 +9,7 @@ import lombok.Data;
  * @Date: 2020/6/27
  */
 @Data
+@Slf4j
 public class HelloString implements Cloneable {
 
     private String name;
@@ -16,7 +18,7 @@ public class HelloString implements Cloneable {
     public static void main(String[] args) throws CloneNotSupportedException {
         String a = "hello";
         String b = a + "world";
-        System.out.println(b);
+        log.info(b);
 
         HelloString test1 = new HelloString();
         test1.setName("123");
@@ -34,9 +36,12 @@ public class HelloString implements Cloneable {
         test2.setName("1233");
         test2.setNumber("4565");
 
-        System.out.println(test1.getName() + ", " + test1.getNumber());
-        System.out.println(test2.getName() + ", " + test2.getNumber());
-        System.out.println();
+        log.info(test1.getName() + ", " + test1.getNumber());
+        log.info(test2.getName() + ", " + test2.getNumber());
+
+        String temp1 = "hello test";
+        String temp2 = "hello test";
+        log.info("temp1 == temp2 {}", temp1 == temp2);
     }
 
 }

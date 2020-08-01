@@ -8,9 +8,9 @@
         <version>0.0.1-SNAPSHOT</version>
     </parent>
     <groupId>com.tech</groupId>
-    <artifactId>solution-springcloud-config-server</artifactId>
+    <artifactId>solution-springcloud-web</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>solution-springcloud-config-server</name>
+    <name>solution-springcloud-web</name>
 
     <properties>
         <java.version>1.8</java.version>
@@ -23,10 +23,11 @@
             <artifactId>solution-base</artifactId>
             <version>${solution-base.version}</version>
         </dependency>
-        <!-- spring cloud config 服务端包 -->
+
+        <!-- web -->
         <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-config-server</artifactId>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
     </dependencies>
 
@@ -47,6 +48,10 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
+                <configuration>
+                    <fork>true</fork>
+                    <addResources>true</addResources>
+                </configuration>
             </plugin>
         </plugins>
     </build>

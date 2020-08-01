@@ -31,6 +31,7 @@
         <module>solution-practice</module>
         <module>solution-oauth2-server</module>
         <module>solution-oauth2-client</module>
+        <module>solution-springcloud-web</module>
     </modules>
 
     <properties>

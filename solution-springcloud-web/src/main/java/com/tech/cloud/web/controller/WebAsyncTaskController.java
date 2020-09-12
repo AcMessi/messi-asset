@@ -17,7 +17,7 @@ import org.springframework.web.context.request.async.WebAsyncTask;
 @RestController
 @Slf4j
 @RequestMapping("api/web/")
-public class TestWebAsyncTaskController {
+public class WebAsyncTaskController {
 
     @Autowired
     @Qualifier("taskExecutor")
@@ -25,9 +25,11 @@ public class TestWebAsyncTaskController {
 
     @GetMapping
     public WebAsyncTask<String> getNames() {
-        WebAsyncTask<String> asyncTask = new WebAsyncTask<>(10 * 1000L, executor, () -> {
+        WebAsyncTask<String> asyncTask = new WebAsyncTask<>(0L, executor, () -> {
             log.info("Thread Name {}", Thread.currentThread().getName());
-            Thread.sleep(3000);
+            log.info("active count {}", executor.getActiveCount());
+            log.info("thread count {}", executor.getPoolSize());
+            Thread.sleep(2000);
             return "hello web async task";
         });
 

@@ -8,20 +8,16 @@ package modules.calculation;
 public class HelloInt {
 
     public static void main(String[] args) {
-        int i = 1, j = 1;
-        int k = i++;
-        int m = ++j;
-        System.out.println("k: " + k);
-        System.out.println("m: " + m);
-
-        int a = 1;
-        a = a++;
-        int b = a++;
-        int c = a + ++a * a++;
-        System.out.println("a: " + a);
-        System.out.println("b: " + b);
-        System.out.println("c: " + c);
-
+        int z = 1;
+        int z1 = z++;
     }
+
+//    Code:
+//       0: iconst_1 将int型(1)推送至栈顶
+//       1: istore_1 将栈顶int型数值存入第二个本地变量
+//       2: iload_1 将第二个int型本地变量推送至栈顶
+//       3: iinc  1, 1 计算
+//       6: istore_2 将栈顶int型数值存入第三个本地变量
+//       7: return
 
 }
